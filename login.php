@@ -76,6 +76,7 @@
 		$mysqli= new mysqli($serverHost, $serverUsername, $serverPassword,$database);
 		//käsk
 		$stmt = $mysqli ->prepare("INSERT INTO user_sample (email, password) VALUES(?, ?)");
+		echo mysqli ->error
 		//s-strin i-int d-double/decimal
 		//iga küsimärgi jaoks 1 täht, mis tüüpi
 		$stmt->bind_param("ss", $signupEmail, $password);
